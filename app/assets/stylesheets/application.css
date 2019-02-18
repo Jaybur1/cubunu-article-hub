@@ -15,7 +15,7 @@
  */
 
 body {
-    background: url('background.png');
+    background: image_url('background.png');
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     font-size: 15px;
