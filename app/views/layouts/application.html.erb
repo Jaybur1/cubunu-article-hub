@@ -2,13 +2,14 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Luckiest+Guy" rel="stylesheet">
-    <title>RubyBlog</title>
+    <title>CUBUNU ruby Article Hub</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <p class="flash"><%= flash.notice %></p>
     <%= yield %>
   </body>
 </html>
