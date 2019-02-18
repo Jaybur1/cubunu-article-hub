@@ -1,5 +1,23 @@
-<h1><%= @article.title%></h1>
-<p><%= @article.body%></p>
-<%= link_to 'Edit', edit_article_path(@article),class: 'action_button'%>
-<%= link_to 'Delete', article_path(@article), method: :delete , class: 'action_button', data: {confirm: "Are you sure you want to delete that article ?"}%>
-<%= link_to "Back to Articles List", articles_path, class: 'action_button'%>
+<div class="article-content">
+  <h1><%= @article.title%></h1>
+  <p><%= @article.body%></p>
+  <%= link_to 'Edit', edit_article_path(@article),class: 'action_button'%>
+  <%= link_to 'Delete', article_path(@article), method: :delete , class: 'action_button', data: {confirm: "Are you sure you want to delete that article ?"}%>
+  <%= link_to "Back to Articles List", articles_path, class: 'action_button'%>
+</div>
+<div class="add-comment-box">
+  <%= render partial: 'comments/form'%>
+</div>
+<div class="comments-section">
+  <h3>
+    <%if @article.comments.size == 0%>
+      No comments for now ...
+    <% elsif @article.comments.size == 1%>
+      <%= "#{@article.comments.size} Comment" %>
+    <% else %>
+      <%="#{@article.comments.size} Comments"%>
+    <% end %>
+  </h3>
+  <hr />
+  <%= render partial: 'articles/comment', collection: @article.comments %>
+</div>
