@@ -15,5 +15,76 @@
  */
 
 body {
-    background: url('./background.svg')
+    background: url('./background.png');
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 40%;
+}
+
+.index {
+    margin-top: 18vh;
+}
+
+#articles {
+    box-shadow: 1px 1px 1px #AEABAB;
+    border-radius: 5px;
+    background: rgba(174, 171, 171, 0.2);
+    width: 75vw;
+    padding: 1.6em;
+    margin-left: 10vw;
+}
+
+.action_button {
+    position: relative;
+    top: 15px;
+    box-shadow: 1px 1px 1px #AEABAB;
+    border-radius: 5px;
+    background: rgba(174, 171, 171, 0.2);
+    padding: 1em;
+
+}
+
+.action_button:hover {
+    font-size: 16px;
+    box-shadow: 1px 2px 1px #AEABAB;
+}
+
+.submit-new input {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    position: relative;
+    top: 15px;
+    border: none;
+    box-shadow: 1px 1px 1px #AEABAB;
+    border-radius: 5px;
+    background: rgba(174, 171, 171, 0.2);
+    padding: 1em;
+}
+
+.submit-new input:hover {
+    font-size: 16px;
+    box-shadow: 1px 2px 1px #AEABAB;
+}
+
+.footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
 }
