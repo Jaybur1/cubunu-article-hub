@@ -14,12 +14,24 @@
  *= require_self
  */
 
+* {
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
 body {
     background: url('background.png');
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
-    font-size: 15px;
 }
+
 
 a {
     text-decoration: none;
@@ -40,13 +52,24 @@ li {
     margin-top: 18vh;
 }
 
-#articles {
+.articles-list {
     box-shadow: 1px 1px 1px #AEABAB;
     border-radius: 5px;
     background: rgba(174, 171, 171, 0.2);
     width: 75vw;
     padding: 1.6em;
     margin-left: 10vw;
+    font-size: 15px;
+}
+
+.tags-list {
+    box-shadow: 1px 1px 1px #AEABAB;
+    border-radius: 5px;
+    background: rgba(174, 171, 171, 0.2);
+    width: 75vw;
+    padding: 1.6em;
+    margin-left: 10vw;
+    font-size: 15px;
 }
 
 .action_button {

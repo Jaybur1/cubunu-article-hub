@@ -1,0 +1,18 @@
+<div class="content">
+  <h1>
+    Articles Tagged with "<%= @tag.name %>"
+    <h1>
+      <ul class="articles-list">
+        <% if @tag.articles.size == 0%>
+          Sorry, there is no more articles whit this tag, try a different one.
+        <% else %>
+          <% @tag.articles.each do |article| %>
+            <li>
+              <%= link_to article.title, article_path(article), class: 'article-box' %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <%= link_to "Back to Articles List", articles_path, class: 'action_button'%>
+      <%= link_to 'Pick Different Tag', tags_path, class: "action_button" %>
+    </div>
