@@ -121,6 +121,10 @@ li {
     padding: 0.8em;
 }
 
+.attachment img {
+    width: 100px;
+}
+
 .footer {
     font-family: 'Courier New', Courier, monospace;
     font-size: 8px;
