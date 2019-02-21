@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<%= form_tag author_sessions_path, method: :post do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <br/>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <br/>
+  </div>
+  <%= submit_tag "Login" , class: 'action_button' %>
+<% end %>
+<div class="sign-in-box">
+  <h3>You new ? Come Join us !</h3>
+  <%= link_to 'Sign in', new_author_path %>
+</div>
+<%= link_to 'Back', articles_path , class: 'action_button' %>

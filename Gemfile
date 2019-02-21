@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem "paperclip"
-
+#authentication
 gem "sorcery"
 
 # Reduces boot times through caching; required in config/boot.rb

@@ -28,7 +28,8 @@ h3 {
 
 body {
     background: url('background.png');
-    font-family: 'Luckiest Guy', cursive;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
@@ -42,14 +43,50 @@ li {
     list-style: none;
 }
 
-.logo {
-    position: absolute;
-    top: 0;
-    left: 40%;
+input {
+    border: inherit;
+    box-shadow: 1px 1px 1px #AEABAB;
+    background: inherit;
+    font-family: inherit;
 }
 
-.index {
-    margin-top: 18vh;
+
+nav {
+    background: rgba(174, 171, 171, 0.6);
+    box-shadow: 3px 3px 3px #AEABAB;
+    width: 100vw;
+    height: 2.8em;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+nav .current-user {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+nav ul {
+    margin-left: -30px;
+}
+
+nav .nav-li {
+    padding: 10px;
+    padding-top: 15px;
+    display: inline-flex;
+    margin-left: -10px;
+    margin-top: -15px;
+}
+
+nav .nav-li:hover {
+    background: rgba(174, 171, 171, 1);
+}
+
+#container {
+    margin-top: 15vh;
 }
 
 .articles-list {
@@ -62,6 +99,43 @@ li {
     font-size: 15px;
 }
 
+.article-box {
+    background: rgba(174, 171, 171, 0.3);
+    box-shadow: 1px 1px 1px #AEABAB;
+    width: 100%;
+    height: 15vh;
+}
+
+.article-card {
+    display: grid;
+    grid-template-rows: 50px 50px;
+    height: 100%;
+}
+
+.article-pic {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 75px;
+    margin-top: 25px;
+}
+
+.empty-pic {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 75px;
+    margin-top: 25px;
+}
+
+.article-box a {
+    padding: 50px;
+}
+
+.article-box a:hover {
+    background: rgba(174, 171, 171, 1);
+}
+
 .tags-list {
     box-shadow: 1px 1px 1px #AEABAB;
     border-radius: 5px;
@@ -70,6 +144,11 @@ li {
     padding: 1.6em;
     margin-left: 10vw;
     font-size: 15px;
+}
+
+.action-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .action_button {
@@ -83,8 +162,7 @@ li {
 }
 
 .action_button:hover {
-    font-size: 16px;
-    box-shadow: 1px 2px 1px #AEABAB;
+    box-shadow: 5px 5px 5px #AEABAB;
 }
 
 .submit-new input {
@@ -125,9 +203,14 @@ li {
     width: 100px;
 }
 
+.logged-in-as {
+    position: relative;
+    top: 30vh;
+    margin-top: 25px;
+}
+
 .footer {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 8px;
-    position: absolute;
-    bottom: 0;
+    font-size: 11px;
+    position: relative;
 }

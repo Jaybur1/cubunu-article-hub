@@ -1,16 +1,18 @@
 <div class="index content">
-  <h1>All Articles</h1>
+  <h1>Rails ArtiHub</h1>
   <ul class="articles-list">
     <% @articles.each do |article| %>
-      <li>
-        <%= link_to article.title, article_path(article), class: 'article-box' %>
+      <li class= 'article-box' >
+        <div class="article-card">
+          <% if article.image.exists? %>
+            <%= image_tag article.image.url(:medium), class: 'article-pic' %>
+          <% else %>
+            <img src="http://qc.chem.nagoya-u.ac.jp/wordpress/wp-content/themes/theron-lite/images/blank_img.png" class="empty-pic">
+          <% end %>
+          <%= link_to article.title, article_path(article)%>
+        </div>
       </li>
     <% end %>
   </ul>
-  <%= link_to "Create a new Article", new_article_path, class: 'action_button' %>
-  <%= link_to 'Pick a Tag', tags_path , class: 'action_button'%>
-  <p class='footer'>Coded by JayBur&copy;2019</p>
-  <div class="logo">
-    <%=svg 'title_logo' %>
-  </div>
+</div>
 </div>
