@@ -7,12 +7,19 @@
           Sorry, there is no more articles whit this tag, try a different one.
         <% else %>
           <% @tag.articles.each do |article| %>
-            <li>
-              <%= link_to article.title, article_path(article), class: 'article-box' %>
+            <li li class= 'article-box'>
+              <div class="article-card">
+                <% if article.image.exists? %>
+                  <%= image_tag article.image.url(:medium), class: 'article-pic' %>
+                <% else %>
+                  <img src="http://qc.chem.nagoya-u.ac.jp/wordpress/wp-content/themes/theron-lite/images/blank_img.png" class="empty-pic">
+                <% end %>
+                <%= link_to article.title, article_path(article)%>
+              </div>
             </li>
           <% end %>
         <% end %>
       </ul>
-      <%= link_to "Back to Articles List", articles_path, class: 'action_button'%>
-      <%= link_to 'Pick Different Tag', tags_path, class: "action_button" %>
+      <%= link_to "Back to Articles List", articles_path, class: 'login_button'%>
+      <%= link_to 'Pick Different Tag', tags_path, class: "login_button" %>
     </div>

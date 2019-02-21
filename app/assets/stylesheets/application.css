@@ -20,10 +20,12 @@
 
 h1 {
     font-size: 30px;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 20px;
+    font-weight: 400;
 }
 
 body {
@@ -32,6 +34,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
+
 
 
 a {
@@ -45,7 +48,7 @@ li {
 
 input {
     border: inherit;
-    box-shadow: 1px 1px 1px #AEABAB;
+    box-shadow: 2px 2px 2px #AEABAB;
     background: inherit;
     font-family: inherit;
 }
@@ -85,17 +88,24 @@ nav .nav-li:hover {
     background: rgba(174, 171, 171, 1);
 }
 
+.flash {
+    position: absolute;
+    top: 0;
+    left: 43%;
+}
+
 #container {
     margin-top: 15vh;
+    padding-bottom: 5vh;
 }
 
 .articles-list {
     box-shadow: 1px 1px 1px #AEABAB;
     border-radius: 5px;
     background: rgba(174, 171, 171, 0.2);
-    width: 75vw;
+    width: 65vw;
     padding: 1.6em;
-    margin-left: 10vw;
+    margin-left: 14.5vw;
     font-size: 15px;
 }
 
@@ -136,14 +146,128 @@ nav .nav-li:hover {
     background: rgba(174, 171, 171, 1);
 }
 
+.login-box {
+    width: 40vw;
+    margin-top: 15vh;
+    margin-left: 25.5vw;
+    background: rgba(174, 171, 171, 0.2);
+    box-shadow: 2px 2px 2px #AEABAB;
+    padding: 1.8em;
+    text-align: center;
+    font-size: 25px;
+}
+
+.article-content {
+    background: rgba(174, 171, 171, 0.3);
+    width: 65vw;
+    margin-left: 16vw;
+}
+
+.article-content h1 {
+    background: rgba(174, 171, 171, 0.6);
+    margin-top: -1px;
+}
+
+.article-body {
+    display: inline-block;
+    position: relative;
+}
+
+.action {
+    margin-top: 30px;
+}
+
+.login-box input {
+    height: 25px;
+}
+
+.login-box h1 {
+    margin-top: -15px;
+}
+
+.email-field {
+    padding-bottom: 15px;
+}
+
+.password-field {
+    margin-right: 27px;
+}
+
+.login_button {
+    background: rgba(174, 171, 171, 0.2);
+    width: 80px;
+    height: 60px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.login_button:hover {
+    cursor: pointer;
+    background: rgba(174, 171, 171, 0.8);
+}
+
+.sign_button {
+    background: rgba(174, 171, 171, 0.2);
+    box-shadow: 2px 2px 2px #AEABAB;
+    width: 80px;
+    height: 50px;
+    margin-top: 15px;
+    padding: 8px;
+}
+
+.sign_button:hover {
+    background: rgba(174, 171, 171, 0.8);
+}
+
+.s-email-field {
+    margin-left: 26px;
+}
+
+.s-c-password-field {
+    margin-right: 73px;
+}
+
+.signin_button {
+    margin-top: 30px;
+    height: 30px;
+    padding: 5px 15px;
+    background: rgba(174, 171, 171, 0.3);
+}
+
+.signin_button:hover {
+    cursor: pointer;
+    background: rgba(174, 171, 171, 0.8);
+}
+
+
 .tags-list {
     box-shadow: 1px 1px 1px #AEABAB;
     border-radius: 5px;
     background: rgba(174, 171, 171, 0.2);
-    width: 75vw;
+    width: 65vw;
     padding: 1.6em;
-    margin-left: 10vw;
+    margin-left: 14.5vw;
     font-size: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.tags-str {
+    position: absolute;
+
+}
+
+.tags .login_button {
+    background: none;
+    margin-top: -5px;
+}
+
+.tags .login_button:hover {
+    background: rgba(174, 171, 171, 0.6);
 }
 
 .action-box {
@@ -152,17 +276,17 @@ nav .nav-li:hover {
 }
 
 .action_button {
-    position: relative;
-    top: 15px;
-    box-shadow: 1px 1px 1px #AEABAB;
-    border-radius: 5px;
+    position: absolute;
+    top: 75vh;
+    right: 48vw;
+    box-shadow: 2px 2px 2px #AEABAB;
     background: rgba(174, 171, 171, 0.2);
     padding: 1em;
 
 }
 
 .action_button:hover {
-    box-shadow: 5px 5px 5px #AEABAB;
+    background: rgba(174, 171, 171, 0.8);
 }
 
 .submit-new input {
@@ -183,6 +307,25 @@ nav .nav-li:hover {
     box-shadow: 1px 2px 1px #AEABAB;
 }
 
+.comment-form {
+    background: rgba(174, 171, 171, 0.3);
+    padding: 1.2em;
+    width: 63vw;
+    margin-left: 15vw;
+}
+
+.comment-form input {
+    height: 30px;
+    box-shadow: none;
+    background: #fff;
+}
+
+.comment-form .input-field {
+    width: 60%;
+    height: 70px;
+    border: none;
+}
+
 .add-comment-box {
     margin-top: 100px;
 }
@@ -193,10 +336,43 @@ nav .nav-li:hover {
 
 .comment-box {
     background: rgba(174, 171, 171, 0.2);
-    box-shadow: 1px 2px 1px #AEABAB;
-    border-radius: 5px;
     margin-top: 20px;
     padding: 0.8em;
+}
+
+.alt_button {
+    box-shadow: none;
+    background: rgba(174, 171, 171, 0.2);
+    height: 27px;
+}
+
+.alt_button:hover {
+    cursor: pointer;
+    background: rgba(174, 171, 171, 0.8);
+}
+
+.form input {
+    height: 30px;
+    box-shadow: none;
+    background: #fff;
+}
+
+.form .input-field {
+    width: 80%;
+    height: 200px;
+    border: none;
+}
+
+.add-tag input {
+    width: 50%;
+}
+
+.add-attachment {
+    padding-bottom: 1em;
+}
+
+.add-attachment input {
+    height: 23px;
 }
 
 .attachment img {
@@ -213,4 +389,5 @@ nav .nav-li:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 11px;
     position: relative;
+    bottom: 0;
 }

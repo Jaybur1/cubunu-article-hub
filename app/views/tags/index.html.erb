@@ -5,11 +5,13 @@
       Sorry, There is no tags for now ...
     <%else%>
       <% @tags.each do |tag| %>
-        <li>
-          <%= link_to tag.name , tag_path(tag) %>
+        <li class="article-box">
+          <div class="article-card">
+            <%= link_to tag.name , tag_path(tag) %>
+          </div>
         </li>
       <% end %>
     <% end %>
   </ul>
-  <%= link_to "Back to Articles List", articles_path, class: 'action_button'%>
+  <%= link_to "Back to Articles List", articles_path, class: 'login_button'%>
 </div>

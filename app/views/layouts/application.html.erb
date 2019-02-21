@@ -22,7 +22,9 @@
             <li class="nav-li"><%= link_to "Pick a Tag", tags_path, class: 'nav_button' %></li>
             <li class="nav-li"><%= link_to "logout", logout_path, class: 'nav_button' %></li>
           <% else %>
-            <li><%= link_to 'Login', login_path, class: 'login-button' %></li>
+            <li class="nav-li"><%= link_to 'Home', articles_path, class: 'nav_button' %></li>
+            <li class="nav-li"><%= link_to 'Login', login_path, class: 'nav_button' %></li>
+            <li class="nav-li"><%= link_to 'Sign in', new_author_path, class: 'nav_button' %></li>
           <% end %>
         </ul>
       </nav>
@@ -41,6 +43,5 @@
         <%= link_to 'Login', login_path , class: "login-button" %>
       <% end %>
     </h6> -->
-    <p class='footer'>Coded by JayBur&copy;2019</p>
   </body>
 </html>

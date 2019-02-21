@@ -4,30 +4,31 @@
       <li><%= error %></li>
     <% end %>
   </ul>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body%>
-  </p>
-  <p>
-    <%= f.label :tag_list %><br />
-    <%= f.text_field :tag_list%>
-  </p>
-  <p class="add-attachment attachment">
-    <% if @article.image.exists? %>
-      <%= image_tag @article.image.url %><br />
-      <%= f.label :image, "Change Attachment?" %><br />
-      <%= f.file_field :image %>
-    <% else %>
-      <%= f.label :image, "Attach an Image" %><br />
-      <%= f.file_field :image %>
-    <% end %>
-  </p>
-  <p class="submit-new">
-    <%= f.submit %>
-    <%= link_to 'Back to Articles', articles_path , class: 'action_button' %>
-  </p>
+  <div class="form">
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %><br />
+      <%= f.text_area :body ,class: "input-field"%>
+    </p>
+    <p class="add-tag">
+      <%= f.label :tag_list %><br />
+      <%= f.text_field :tag_list%>
+    </p>
+    <p class="add-attachment attachment">
+      <% if @article.image.exists? %>
+        <%= image_tag @article.image.url %><br />
+        <%= f.label :image, "Change Attachment?" %><br />
+        <%= f.file_field :image %>
+      <% else %>
+        <%= f.label :image, "Attach an Image" %><br />
+        <%= f.file_field :image %>
+      <% end %>
+    </p>
+  </div>
+</div>
+<%= f.submit class: 'alt_button' %>
+<%= link_to 'Back to Articles', articles_path , class: 'login_button' %>
 <% end %>

@@ -4,7 +4,7 @@ class AuthorSessionsController < ApplicationController
 
     def create
       if login(params[:email], params[:password])
-        redirect_back_or_to(articles_path, notice: 'Logged in successfully.')
+        redirect_to(articles_path, notice: 'Logged in successfully.')
       else
         redirect_to login_path , notice: "The email or the password are wrong try again please."
       end

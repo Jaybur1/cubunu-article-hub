@@ -10,22 +10,20 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.label :username %>
+    <%= form.label :username , "Username:"%>
     <%= form.text_field :username %>
   </div>
-  <div class="field">
-    <%= form.label :email %>
+  <div class="s-email-field">
+    <%= form.label :email , "Email:"%>
     <%= form.text_field :email %>
   </div>
-  <div class="field">
-    <%= form.label :password %>
+  <div class="s-password-field">
+    <%= form.label :password ,"Password:"%>
     <%= form.password_field :password %>
   </div>
-  <div class="field">
-    <%= form.label :password_confirmation %>
+  <div class="s-c-password-field">
+    <%= form.label :password_confirmation, "Confirm Password:" %>
     <%= form.password_field :password_confirmation %>
   </div>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit  class: "signin_button"%>
 <% end %>
